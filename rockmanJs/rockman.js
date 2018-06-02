@@ -1007,11 +1007,12 @@
 				"The world is destined to be doomed!",
 				"People kill each in bulk! They are selfish, egotistic, full of bullshit!",
 				"But the little guy-Rockman thinks otherwise.",
-				"move leftD； move right:A; attack:j; jump:k"			
+				"move left:D; move right:A; attack:j; jump:k"			
 			],
 			imgData:[
-				"img/story00.png",
-				"img/story01.png",
+				"img/story-1.jpg",
+				"img/story-2.jpg",
+				"img/story-3.jpg"
 			],
 			TimerI:0,
 			Run:function(){
@@ -1025,8 +1026,12 @@
 						Story.obj.oStoryImg.src=Story.imgData[1];				
 					};
 					if (Story.obj.TimerI==2) {
-						Story.obj.oStoryScreen.style.display="none";
 						Story.obj.oControllerInfoShower.innerHTML=Story.infoData[2];
+						Story.obj.oStoryImg.src=Story.imgData[2];
+					}
+					if (Story.obj.TimerI==3) {
+						Story.obj.oStoryScreen.style.display="none";
+						Story.obj.oControllerInfoShower.innerHTML=Story.infoData[3];
 						Story.obj.TimerI=0;
 						System.GameStartSwitch=true;
 					};
